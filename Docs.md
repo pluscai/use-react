@@ -24,7 +24,16 @@ you can use react as a `jquery` library to your existing HTML page
 if you want to use `jsx` grammar,use `babel` to convert.
 
 a `jsx` grammar like this:
+=======
+### 1. embed React into HTML
 
+you can use react as a `jquery` library to your existing HTML page
+
+### 2. add `jsx` to a project
+
+if you want to use `jsx` grammar,use `babel` to convert.
+
+a `jsx` grammar like this:
  ```js
 class LikeButton extends React.Component {
   constructor(props) {
