@@ -55,5 +55,13 @@ class LikeButton extends React.Component {
 }
  ```
 
+## Create a New React App
 
+very simple,just run:
+
+```
+npx create-react-app my-app
+cd my-app
+npm start
+```
 
