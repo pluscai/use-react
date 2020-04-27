@@ -1,2 +1,4 @@
 # use-react
-user react right now
+## Main concepts
+
+- [`JSX` 和 `React elements`](https://github.com/pluscai/use-react/issues/2)
