@@ -24,6 +24,7 @@ you can use react as a `jquery` library to your existing HTML page
 if you want to use `jsx` grammar,use `babel` to convert.
 
 a `jsx` grammar like this:
+
  ```js
 class LikeButton extends React.Component {
   constructor(props) {
