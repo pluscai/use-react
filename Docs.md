@@ -109,3 +109,32 @@ const element = {
 };
 ```
 
+## 3. Rendering Elements
+
+> An element describes what you want to see on the screen.
+
+原则：尽可能少的操作`DOM`
+
+如下面react官网的例子就是很好的说明：
+
+```js
+function tick() {
+  const element = (
+    <div>
+      <h1>Hello, world!</h1>
+      <h2>It is {new Date().toLocaleTimeString()}.</h2>
+    </div>
+  );
+  ReactDOM.render(element, document.getElementById('root'));}
+
+setInterval(tick, 1000);
+```
+
+> Even though we create an element describing the whole UI tree on every tick, only the text node whose contents have changed gets updated by React DOM
+
+
+
+![DOM inspector showing granular updates](assets/granular-dom-updates.gif)
+
+
+
