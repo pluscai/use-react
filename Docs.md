@@ -136,5 +136,57 @@ setInterval(tick, 1000);
 
 ![DOM inspector showing granular updates](assets/granular-dom-updates.gif)
 
+## 4. Components and Props
 
+> Conceptually, `components` are like JavaScript functions. They accept arbitrary inputs (called “`props`”) and return `React elements` describing what should appear on the screen.
+
+- Component的两种写法：
+
+  ```js
+  // Function Components
+  function Welcome(props) {
+    return <h1>Hello, {props.name}</h1>;
+  }
+  
+  // => 等价于下面写法
+  
+  // Class Components
+  class Welcome extends React.Component {
+    render() {
+      return <h1>Hello, {this.props.name}</h1>;
+    }
+  }
+  ```
+
+- 渲染Component的机制
+
+  官网例子：
+
+  ```js
+  function Welcome(props) {
+    return <h1>Hello, {props.name}</h1>;
+  }
+  
+  const element = <Welcome name="Sara" />;
+  ReactDOM.render(
+    element,
+    document.getElementById('root')
+  );
+  ```
+
+  分析component的渲染到页面上的过程：
+
+  1. we call `ReactDOM.render()` the `<Welcome name="Sara" />` element.
+
+  2. React calls the `Welcome` component with `{name: 'Sara'}` as the ***props***.
+
+  3. Our `Welcome` component returns a `Hello, Sara` element as the result
+
+  4. React DOM efficiently updates the DOM to match `Hello, Sara`.
+
+- Components可以组合使用
+
+  `Components`可以组合使用，也可以将常用部分提取出来作为`components`
+
+> tips : **Props are Read-Only**
 
