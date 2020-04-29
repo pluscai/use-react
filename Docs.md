@@ -190,3 +190,88 @@ setInterval(tick, 1000);
 
 > tips : **Props are Read-Only**
 
+## 5. State and Lifecycle
+
+- 何谓`state`
+
+  > A component needs `state` when some data associated with it changes over time. For example, a `Checkbox` component might need `isChecked` in its state,
+
+  - 组件内部涉及的数据会根据时间条件变化
+
+  - 随着数据的变化，要相应的更新`DOM`
+
+  - 此时：需要使用`state`去接收这些不断变化的数据，然后通过`setState`更新`DOM`
+
+  
+
+- 何谓`Lifecycle methods ` 
+
+  > `Lifecycle methods` are custom functionality that gets executed during the different phases of a component. There are methods available when the component gets created and inserted into the DOM (`mounting`), when the component updates, and when the component gets `unmounted` or removed from the DOM
+
+  - 组件的生命周期即组件从被创建、渲染插入DOM，从DOM中移除所经历的阶段
+
+  - 每个阶段都有对应的函数，你可以去做相应的操作，比如下面demo中，`componentDidMount`函数在组件被渲染进DOM时调用，`componentWillUnmount`函数在组件从`DOM`中移除时调用
+
+  
+
+- `state` VS `props`
+
+  > The most important difference between `state` and `props` is that `props` are passed from a parent component, but `state` is managed by the component itself. A component cannot change its `props`, but it can change its `state`.
+
+  - `props`是由外部传入组件的，组件不能改变`props`
+  - `state`是在组件内部进行管理的，组件可以改变 `state`
+
+  
+
+- 何谓`单向数据流`
+
+  父组件可以向子组件传值，反之不行。比如下面DEMO中：父组件`Clock`将自己`state`中存的`date`的值传给了子组件`FormattedDate`
+
+官网DEMO：
+
+```js
+// 子组件
+function FormattedDate(props) {
+  return <h2>It is {props.date.toLocaleTimeString()}.</h2>;
+}
+
+class Clock extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {date: new Date()};
+  }
+ 
+   // 生命周期函数
+  componentDidMount() {  
+    this.timerID = setInterval(
+      () => this.tick(),
+      1000
+    );
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timerID);
+  }
+
+  tick() {
+    this.setState({
+      date: new Date()
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>Hello, world!</h1>
+        <FormattedDate date={this.state.date} />
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(
+  <Clock />,
+  document.getElementById('root')
+);
+```
+
