@@ -352,6 +352,45 @@ ReactDOM.render(
 );
 ```
 
-That is it! cool!
+That it is! cool!
 
 注意遍历时要给`element`加`key`属性，否则控制台会报警告。
+
+## 9. Forms
+
+> An input form element whose value is controlled by React in this way is called a “***controlled component***”
+
+```js
+class NameForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {value: ''};
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+
+  handleSubmit(event) {
+    alert('A name was submitted: ' + this.state.value);
+    event.preventDefault();
+  }
+
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <label>
+          Name:
+          <input type="text" value={this.state.value} onChange={this.handleChange} />
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
+    );
+  }
+}
+```
+
+`input`,`textarea`,`select`都是以上述的方式被`React`控制的：`value={this.state,value} onChange={this.handleChange}`
