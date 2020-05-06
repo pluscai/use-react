@@ -299,3 +299,33 @@ function ActionLink() {
 }
 ```
 
+## 7. Conditional Rendering
+
+- 根据不同条件，渲染不同的组件
+
+- 如果组件的返回值为null，则不渲染该组件
+
+```js
+function UserGreeting(props) {
+  return <h1>Welcome back!</h1>;
+}
+
+function GuestGreeting(props) {
+  return <h1>Please sign up.</h1>;
+}
+
+function Greeting(props) {
+  const isLoggedIn = props.isLoggedIn;
+  if (isLoggedIn) {
+    return <UserGreeting />;
+  }
+  return <GuestGreeting />;
+}
+
+ReactDOM.render(
+  // Try changing to isLoggedIn={true}:
+  <Greeting isLoggedIn={false} />,
+  document.getElementById('root')
+);
+
+```
