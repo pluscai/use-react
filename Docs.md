@@ -394,3 +394,13 @@ class NameForm extends React.Component {
 ```
 
 `input`,`textarea`,`select`都是以上述的方式被`React`控制的：`value={this.state,value} onChange={this.handleChange}`
+
+## 10. Lifting  State Up
+
+将多个组件共享的数据提升至 离这些组件最近的共同父组件中进行管理。
+
+> There should be a single “source of truth” for any data that changes in a React application. Usually, the state is first added to the component that needs it for rendering. Then, if other components also need it, you can ***lift it up*** to their closest common ancestor. Instead of trying to sync the state between different components, you should rely on the [top-down data flow](https://reactjs.org/docs/state-and-lifecycle.html#the-data-flows-down).
+
+官网[demo](https://codepen.io/gaearon/pen/WZpxpz?editors=0010)是个非常好的例子：
+
+![Monitoring State in React DevTools](assets/react-devtools-state.gif)
