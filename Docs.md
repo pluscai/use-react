@@ -329,3 +329,29 @@ ReactDOM.render(
 );
 
 ```
+
+## 8. Lists and Keys
+
+`React`中渲染列表，简单粗暴：
+
+```js
+function NumberList(props) {
+  const numbers = props.numbers;
+  const listItems = numbers.map((number) =>
+    <li key={number.toString()}>{number}</li>
+  );
+  return (
+    <ul>{listItems}</ul>
+  );
+}
+
+const numbers = [1, 2, 3, 4, 5];
+ReactDOM.render(
+  <NumberList numbers={numbers} />,
+  document.getElementById('root')
+);
+```
+
+That is it! cool!
+
+注意遍历时要给`element`加`key`属性，否则控制台会报警告。
