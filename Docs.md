@@ -434,3 +434,31 @@ function WelcomeDialog() {
 }
 ```
 
+## 12. Thinking In React
+
+React change the way that Web apps should be build.
+
+`UI` -> `Web apps` 四步：
+
+1. Break The UI Into A Component Hierarchy 
+
+   将UI结构拆解成组件结构
+
+2. Build A Static Version in React
+
+   > It’s best to decouple these processes because building a static version requires a lot of typing and no thinking, and adding interactivity requires a lot of thinking and not a lot of typing. 
+
+   这个阶段用不到`state`
+
+3. Identify The Minimal (but complete) Representation Of UI State
+
+   找到`state`,即交互中哪些数据会改变
+
+4. Identify Where Your State Should Live
+
+   将`state`放到合适的组件中维护
+
+5. Add Inverse Data Flow
+
+   如果有反向数据流，即子组件影响父组件内的状态，传回调函数给子组件去影响父组件的值
+
