@@ -404,3 +404,33 @@ class NameForm extends React.Component {
 官网[demo](https://codepen.io/gaearon/pen/WZpxpz?editors=0010)是个非常好的例子：
 
 ![Monitoring State in React DevTools](assets/react-devtools-state.gif)
+
+## 11. Composition vs Inheritance
+
+> Remember that components may accept arbitrary props, including primitive values, React elements, or functions.
+
+`React`的组件的`composition`和`props`组合起来用，而不是用继承，如下demo：
+
+```js
+function Dialog(props) {
+  return (
+    <FancyBorder color="blue">
+      <h1 className="Dialog-title">
+        {props.title}
+      </h1>
+      <p className="Dialog-message">
+        {props.message}
+      </p>
+    </FancyBorder>
+  );
+}
+
+function WelcomeDialog() {
+  return (
+    <Dialog
+      title="Welcome"
+      message="Thank you for visiting our spacecraft!" />
+  );
+}
+```
+
