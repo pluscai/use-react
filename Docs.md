@@ -462,3 +462,12 @@ React change the way that Web apps should be build.
 
    如果有反向数据流，即子组件影响父组件内的状态，传回调函数给子组件去影响父组件的值
 
+# Advance Guides
+
+## Accessibility
+
+- 如何只用键盘就即可使用网页全部功能
+- 网页如何服务残障人士
+
+## Code-Splitting
+
