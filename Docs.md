@@ -471,3 +471,6 @@ React change the way that Web apps should be build.
 
 ## Code-Splitting
 
+Why split code?
+
+> Code-splitting your app can help you “lazy-load” just the things that are currently needed by the user, which can dramatically improve the performance of your app.
