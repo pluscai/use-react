@@ -474,3 +474,15 @@ React change the way that Web apps should be build.
 Why split code?
 
 > Code-splitting your app can help you “lazy-load” just the things that are currently needed by the user, which can dramatically improve the performance of your app.
+
+## Context
+
+数据用props在组件之间传递，当组件层次较深，会显得冗余，用`context`：
+
+> Context provides a way to pass data through the component tree without having to pass props down manually at every level.
+
+```js
+const MyContext = React.createContext(defaultValue);
+<MyContext.Provider value={/* some value */}>
+```
+
