@@ -486,3 +486,13 @@ const MyContext = React.createContext(defaultValue);
 <MyContext.Provider value={/* some value */}>
 ```
 
+## Error Boundaries
+
+React是如何优雅地处理错误的。React 16中引入`error boundary`
+
+```react
+<ErrorBoundary>
+  <MyWidget />
+</ErrorBoundary>
+```
+
