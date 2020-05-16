@@ -521,3 +521,15 @@ class Columns extends React.Component {
 }
 ```
 
+## Higher-Order Components
+
+> Concretely, **a higher-order component is a function that takes a component and returns a new component.**
+
+```react
+const EnhancedComponent = higherOrderComponent(WrappedComponent);
+```
+
+当两个`compent`中重复代码较多时，可用高阶组件，将公共部分提取，提高代码的复用
+
+
+
