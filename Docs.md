@@ -501,3 +501,23 @@ React是如何优雅地处理错误的。React 16中引入`error boundary`
 > Ref forwarding is a technique for automatically passing a [ref](https://reactjs.org/docs/refs-and-the-dom.html) through a component to one of its children. This is typically not necessary for most components in the application. However, it can be useful for some kinds of components, especially in reusable ***component libraries***
 
 写组件库时会用到
+
+## Fragments
+
+> Fragments let you group a list of children without adding extra nodes to the DOM
+
+用来包裹一些特殊DOM节点（html结构中的，tr td、ul li...），因为这些节点不能用div来包裹
+
+```react
+class Columns extends React.Component {
+  render() {
+    return (
+      <React.Fragment>
+        <td>Hello</td>
+        <td>World</td>
+      </React.Fragment>
+    );
+  }
+}
+```
+
