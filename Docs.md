@@ -560,3 +560,7 @@ ReactDOM.render(
 
 ## `JSX` In Depth
 
+`JSX`语法的详细介绍，放在项目里用来替代渲染模板也不错哦。
+
+## Optimizing Performance
+
