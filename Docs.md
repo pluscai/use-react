@@ -583,5 +583,22 @@ render() {
 }
 ```
 
+## Profiler API
 
+> The `Profiler` measures how often a React application renders and what the “cost” of rendering is. Its purpose is to help identify parts of an application that are slow and may benefit from [optimizations such as memoization](https://reactjs.org/docs/hooks-faq.html#how-to-memoize-calculations).
+
+提供一个`Profiler`api，可供分析性能：
+
+```react
+render(
+  <App>
+    <Profiler id="Navigation" onRender={callback}>
+      <Navigation {...props} />
+    </Profiler>
+    <Main {...props} />
+  </App>
+);
+```
+
+## React without ES6
 
