@@ -610,3 +610,10 @@ ES6有对`class`等特性的支持，本节介绍如果不用ES6语法，如何�
 
 ## Reconciliation
 
+深入React的diff算法：
+
+- 先`diff` component的type，如果type不一样，则直接`rebuild`
+
+- 如果type一样， 再继续diff新老component及其children
+
+目的：最大限度的减少DOM操作
