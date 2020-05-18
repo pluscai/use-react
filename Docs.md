@@ -564,3 +564,9 @@ ReactDOM.render(
 
 ## Optimizing Performance
 
+React内部已对DOM操作进行了性能优化，本节介绍了性能相关的小技巧和分析工具
+
+## Portals
+
+
+
