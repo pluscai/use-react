@@ -568,5 +568,20 @@ React内部已对DOM操作进行了性能优化，本节介绍了性能相关的
 
 ## Portals
 
+> Portals provide a first-class way to render children into a DOM node that exists outside the DOM hierarchy of the parent component.
+
+可以将组件渲染至指定DOM
+
+```react
+render() {
+  // React does *not* create a new div. It renders the children into `domNode`.
+  // `domNode` is any valid DOM node, regardless of its location in the DOM.
+  return ReactDOM.createPortal(
+    this.props.children,
+    domNode
+  );
+}
+```
+
 
 
