@@ -602,3 +602,6 @@ render(
 
 ## React without ES6
 
+ES6有对`class`等特性的支持，本节介绍如果不用ES6语法，如何使用React
+
+## React without JSX
