@@ -604,4 +604,9 @@ render(
 
 ES6有对`class`等特性的支持，本节介绍如果不用ES6语法，如何使用React
 
-## React without JSX
+## React without `JSX`
+
+`JSX`是个语法糖（syntactic sugar），不是必须的,如果你不想引入编译工具，你完全可以用`React.createElement`代替`JSX`
+
+## Reconciliation
+
