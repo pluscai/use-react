@@ -617,3 +617,10 @@ ES6有对`class`等特性的支持，本节介绍如果不用ES6语法，如何�
 - 如果type一样， 再继续diff新老component及其children
 
 目的：最大限度的减少DOM操作
+
+## Refs and the DOM
+
+> Refs provide a way to access DOM nodes or React elements created in the render method.
+
+## Render Props
+
