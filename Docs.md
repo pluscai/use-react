@@ -661,3 +661,22 @@ function ExampleApplication() {
 
 ## Typechecking With PropTypes
 
+> React has some built-in typechecking abilities. To run typechecking on the props for a component, you can assign the special `propTypes` property:
+
+```react
+import PropTypes from 'prop-types';
+
+class Greeting extends React.Component {
+  render() {
+    return (
+      <h1>Hello, {this.props.name}</h1>
+    );
+  }
+}
+
+Greeting.propTypes = {
+  name: PropTypes.string
+};
+```
+
+React自带的类型检测，如例子中的`name`只能是字符串类型。
