@@ -636,3 +636,28 @@ ES6有对`class`等特性的支持，本节介绍如果不用ES6语法，如何�
 
 ## Strict Mode
 
+> `StrictMode` is a tool for highlighting potential problems in an application. Like `Fragment`, `StrictMode` does not render any visible UI. It activates additional checks and warnings for its descendants.
+
+用来发现组件的潜在错误。用法如下：
+
+```react
+import React from 'react';
+
+function ExampleApplication() {
+  return (
+    <div>
+      <Header />
+      <React.StrictMode>
+        <div>
+          <ComponentOne />
+          <ComponentTwo />
+        </div>
+      </React.StrictMode>
+      <Footer />
+    </div>
+  );
+}
+```
+
+## Typechecking With PropTypes
+
