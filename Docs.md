@@ -627,3 +627,12 @@ ES6有对`class`等特性的支持，本节介绍如果不用ES6语法，如何�
 > The term [“render prop”](https://cdb.reacttraining.com/use-a-render-prop-50de598f11ce) refers to a technique for sharing code between React components using a prop whose value is a function.
 
 ## Static Type Checking
+
+> Static type checkers like [Flow](https://flow.org/) and [TypeScript](https://www.typescriptlang.org/) identify certain types of problems before you even run your code. They can also improve developer workflow by adding features like auto-completion
+
+`Flow`是facebook开发的`static type checker`
+
+[TypeScript](https://www.typescriptlang.org/) 是微软开发的编程语言，是JavaScript的超集
+
+## Strict Mode
+
