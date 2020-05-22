@@ -680,3 +680,41 @@ Greeting.propTypes = {
 ```
 
 React自带的类型检测，如例子中的`name`只能是字符串类型。
+
+## Uncontrolled Components
+
+复习一下：***controlled component***
+
+> An input form element whose value is controlled by React in this way is called a “***controlled component***”
+
+那么：`uncontrolled Components`就是值不受react控制，那么如何改变元素的值呢？use`ref`
+
+```react
+class NameForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.input = React.createRef();
+  }
+
+  handleSubmit(event) {
+    alert('A name was submitted: ' + this.input.current.value);
+    event.preventDefault();
+  }
+
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <label>
+          Name:
+          <input type="text" ref={this.input} />
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
+    );
+  }
+}
+```
+
+## Web Components
+
