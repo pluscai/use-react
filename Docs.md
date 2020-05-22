@@ -718,3 +718,10 @@ class NameForm extends React.Component {
 
 ## Web Components
 
+> React and [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components) are built to solve different problems. Web Components provide strong encapsulation for reusable components, while React provides a declarative library that keeps the DOM in sync with your data
+
+`web components` - 组件封装重用
+
+`React`让DOM和数据同步
+
+两者可以配合使用。
