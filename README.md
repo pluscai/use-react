@@ -1,6 +1,8 @@
 # use-react
 > use react tonight!
 
+-- 帮到你的话请点 star，订阅点 watch
+
 #### | Concept
 
 - [`JSX` 和 `React elements`](https://github.com/pluscai/use-react/issues/2)
