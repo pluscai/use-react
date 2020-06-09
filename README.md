@@ -5,6 +5,8 @@
 
 #### | Concept
 
+- [Read the fucking manual](https://github.com/pluscai/use-react/blob/master/Docs.md)
+
 - [`JSX` 和 `React elements`](https://github.com/pluscai/use-react/issues/2)
 - [Render`element`to`DOM` （做最少的`DOM`操作）](https://github.com/pluscai/use-react/issues/3)
 - [Components make life easier（组件复用让生活更美好）](https://github.com/pluscai/use-react/issues/4)
@@ -14,7 +16,7 @@
 
 #### | Reading
 
-- 《Developing a React Edge,2nd Edition》笔记
+- [《Developing a React Edge,2nd Edition》笔记](https://github.com/pluscai/use-react/blob/master/developing-a-react-edge.md)
 
 #### | Practice
 
